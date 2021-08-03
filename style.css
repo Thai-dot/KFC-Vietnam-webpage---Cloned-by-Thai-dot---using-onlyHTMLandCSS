@@ -1,0 +1,765 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.2s;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-image: url(https://kfcvietnam.com.vn/templates/images/bg.jpg);
+  background-repeat: repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.container{
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header{
+  background-color: white;
+}
+
+.flag{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flag div{
+  background-color: red;
+  width: 40px;
+  height: 24px;
+}
+
+.flag div:nth-child(2n + 1) {
+  background-color: white;
+}
+
+.login-section {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 20px;
+}
+
+section.logo-hidden {
+  display: none;
+}
+
+.menu-btn {
+  display: inline-block;
+  height: 50px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.logo-mb {
+  display: inline-block;
+  height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media (max-width: 979px) {
+  .login-section,
+  header .flag {
+    display: none;
+  }
+  section.logo-hidden {
+    display: flex;
+  }
+}
+
+.login-but {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-right: 40px;
+}
+
+.login-but-inside a,
+.login-but-inside p {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+#nav-bar {
+  background-color: #f8f8f8;
+  position:sticky;
+  top:0;
+  z-index: 99999;
+}
+
+.category > ul {
+  list-style: none;
+  display: flex;
+}
+
+.category > ul > li {
+  display: inline-block;
+  padding: 0.8rem;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.category ul li a {
+  color: inherit;
+}
+
+.category > ul > li:hover,
+.category > ul > li:active {
+  background-color: black;
+  color: white;
+}
+
+.deliver-box {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 36px;
+  right: 170px;
+  max-width: 300px;
+}
+
+.cot-left {
+  display: flex;
+  margin-left: 0;
+  margin-right: 25px;
+  max-height: 20px;
+}
+
+.deliver-light {
+  margin-right: 15px;
+  color: grey;
+}
+
+.deliver-bold > span {
+  font-weight: 800;
+}
+
+.deliver-light,
+.deliver-bold {
+  position: relative;
+}
+
+.deliver-light > span,
+.deliver-bold > span,
+.cot-right a span {
+  font-size: 15px;
+}
+
+.cot-right a span {
+  font-weight: 800;
+  color: black;
+}
+
+.cot-left:hover {
+  display: flex;
+  position: absolute;
+  width: max-content;
+  min-width: 300px;
+  background-color: white;
+  right: -30px;
+  z-index: 22;
+  height: 100%;
+}
+
+.order {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.btn-cart {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.6666666666666667em 1em;
+}
+
+.icon {
+  background-image: url(https://kfcvietnam.com.vn/templates/images/cart_icon.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  font-size: 1rem;
+  min-width: 1.833333333333rem;
+  height: 1.833333333333rem;
+  margin-right: 0.65rem;
+}
+
+span .number {
+  padding: 0.5rem 0;
+  line-height: 1.75rem;
+}
+
+.text-Cart {
+  font-size: 0.8888888888888889em;
+  color: rgb(228, 0, 43);
+  font-weight: bold;
+}
+
+@media (max-width: 979px) {
+  .order {
+    display: none;
+  }
+  .category {
+    font-size: 1.85rem;
+    height: auto;
+  }
+  .category ul {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  .cot-left:hover {
+    display: none;
+  }
+  .cot-left {
+    flex-direction: column;
+    position: absolute;
+    margin-top: 5px;
+    line-height: 25px;
+    margin-left: 25px;
+  }
+  .cot-right {
+    position: absolute;
+    right: 2rem;
+    top: 1.8rem;
+  }
+  .cot-right > a > span {
+    font-size: 20px;
+  }
+  .cot-left span {
+    font-size: 20px;
+  }
+  .deliver-box {
+    position: relative;
+    bottom: 0;
+    height: 66px;
+    right: 0px;
+    max-width: 100%;
+    background-color: white;
+  }
+}
+
+.img-section img{
+  width: 100%;
+  height: auto;
+}
+
+.anchor-img {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.main{
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+div .left-col {
+  flex: 0 0 21.289%;
+  max-width: 21.289%;
+}
+
+.fixed-thing{
+  position: sticky;
+  top: 65px;;
+}
+
+.menu-header {
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+.menu-header span {
+  font-size: 16px;
+  color: rgb(112, 112, 112);
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.menu-list {
+  padding: 0 1.5rem;
+}
+
+.menu-list a {
+  color: rgb(228, 0, 43);
+  font-weight: 700;
+}
+
+.food-menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(225px,1fr));
+    grid-gap: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.right-col{
+  padding-right:20px;
+}
+
+.right-col >h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.food-combo {
+  box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.075);
+  border-radius: 15px;
+  height: 100%;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.card-body{
+  padding-top: 2rem;
+  padding-bottom: 0.85rem;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.card-body .card-title > h5{
+  font-size: 16px;
+}
+
+.card-body .card-price{
+  margin-top: 1.8rem;
+}
+
+.card-body .card-price > h6 >span{
+  font-size: 25px;
+}
+
+.card-body .card-price > h6 > small{
+  font-size: 85%;
+  font-weight: bold;
+}
+
+.card-body .card-text > ul {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.card-body .card-text > ul > li{
+  font-size: 0.9rem;
+  color: rgb(112, 112, 112);
+  line-height: 1.252;
+  margin-top: 2px;
+}
+
+.card-body .row-btn{
+  display: flex;
+  margin-top:35px;
+  justify-content: space-evenly;
+}
+
+.card-body .row-btn .col-order1{
+  border-radius: 5px;
+  border:solid black 1px;
+  padding: 0.25rem;
+}
+  
+
+.card-body .row-btn .col-order1 a{
+  color:black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-body .row-btn .col-order2{
+  border-radius: 5px;
+  border: solid red 1px;
+  padding: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: red;
+}
+
+.card-body .row-btn .col-order2 a{
+  color:white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media (max-width:979px) {
+  .fixed-thing{
+    top: 130px;
+  }
+}
+
+.bigorder{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.big-pic1 a img{
+  max-width: 500px;
+  max-height: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.big-pic2 img{
+  max-width: 500px;
+  max-height: 500px;
+  width: 100%;
+  height: auto;
+}
+
+#footer{
+  background-color: #fafafa;
+}
+
+.deliver-services{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 4rem;
+
+}
+
+.deliver-services img{
+  width: 100%;
+  max-width: 317px;
+  max-height: 80px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+.footer-row-one{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-one-col1{
+  margin-left: 12px;
+}
+.footer-row-one .row-one-col1{
+  margin-right: 6rem;
+}
+
+.footer-row-one .row-one-col1 ul li{
+  list-style: none;
+  line-height: 1.6rem;
+}
+
+.footer-row-one .row-one-col1 ul li a{
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.footer-row-one .row-one-col2{
+  margin-right: 6rem;
+}
+
+.footer-row-one .row-one-col2 ul li{
+  list-style: none;
+  line-height: 1.6rem;
+}
+
+.footer-row-one .row-one-col2 ul li a{
+  font-weight: 50;
+  color: black;
+}
+
+.footer-row-one .row-one-col2 ul li:first-child a{
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.footer-row-one .row-one-col3{
+  margin-right: 6rem;
+}
+
+.footer-row-one .row-one-col3 ul li a{
+  font-weight: 50;
+  color: black;
+}
+
+.footer-row-one .row-one-col3 ul li{
+  list-style: none;
+  line-height: 1.6rem;
+}
+
+.footer-row-one .row-one-col3 ul li:first-child a{
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.row-one-col4{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-col{
+  display: flex;
+  align-content: space-between;
+  margin-bottom: 28px;
+}
+
+.contact-text{
+  margin-right: 4rem;
+}
+
+.contact-text ul li{
+  list-style: none;
+  line-height: 1.6rem;
+}
+
+.contact-text ul li:first-child a{
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.contact-text ul li a{
+  font-weight: 50;
+  color: black;
+}
+
+.justify-content-nav
+{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 25px;
+}
+
+.justify-content-nav li{
+  list-style: none;
+}
+
+.justify-content-nav li a{
+  padding:0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 0.7777rem;
+  display: inline-block;
+}
+
+.justify-content-nav li a img{
+  user-select: none;
+  max-width: 100%;
+  height: 32px;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+}
+
+.form-control{
+  padding: 7px;
+  margin-top: 15px;
+}
+
+.form-control:focus, [placeholder]{
+  padding-left: 10px;
+}
+
+.submit-btn{
+  background-color: red;
+  padding: 7px 15px;
+  border-radius: 5px;
+}
+
+.submit-btn span{
+  color: white;
+  font-weight: 800;
+}
+
+.bot-row{
+  display: flex;
+  border-top: solid 1px #b7b7b7;
+  margin-top: 28px;
+  padding-top: 25px;
+}
+
+.bot-left{
+width: 50%;
+line-height: 20px;
+}
+
+.bot-left strong{
+  font-size: 16px;
+}
+
+.bot-left p{
+  font-size: 14px;
+}
+
+.bot-left p a{
+  font-size: inherit;
+  color: inherit;
+}
+
+.bot-left p a:hover{
+  color: #c21634;
+}
+
+.bot-right{
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.copyright{
+  padding-top: 35px;
+  padding-bottom: 25px;
+}
+
+.copyright span p{
+  font-size: 14px;
+  text-align: center;
+}
+
+.back-to-top{
+  width: 1.888888888888889em;
+height: 1.888888888888889em;
+background-image: url("https://kfcvietnam.com.vn/templates/images/back_to_top.png");
+background-size: 100% 100%;
+position: fixed;
+z-index: 2;
+right: 15px;
+bottom: 15px;
+font-size: 18px;
+background-color: #fff;
+border-radius: 50rem;
+}
+
+.res-card-items{
+  display: none;
+}
+
+@media (max-width: 979px){
+  .bot-row{
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .bot-left{
+    width: 100%;
+    padding-left: 15px;
+    line-height: 1.5rem;
+  }
+
+  .bot-left strong{
+    font-size: 120%;
+  }
+
+  .bot-left p{
+    font-size: 120%;
+  }
+
+  .bot-right{
+    justify-content: center;
+    width: 100%;
+    padding-top: 25px;
+  }
+  .footer-row-one{
+    display: relative;
+  }
+  .bigorder{
+    justify-content: center;
+    align-content: center;
+  }
+  .row-one-col1, .row-one-col2, .row-one-col3{
+    display: none;
+  }
+
+  .res-card-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 500px;
+    align-items: center;
+    margin:0 auto;
+    margin-bottom: 15px;
+  }
+
+  .center-card{
+    text-align: center;
+  }
+
+  .card-item-header{
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+
+  .card-item-header span{
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .contact-us{
+    display: none;
+  }
+
+  .row-one-col4{
+    width: 100%;
+    margin-left: 12px;
+    margin-right: 5px;
+  }
+
+  .contact-col{
+    margin-bottom: 0;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+
+  .contact-text ul li:first-child a{
+    font-size: 1.5rem;
+  }
+
+  .justify-content-nav li{
+    margin-left: 30px;
+  }
+
+  .email-sec h6{
+    font-size: 25px;
+  }
+
+  .form-control{
+    width: 85%;
+    margin-right: 10px;
+  }
+  
+}
+
+
